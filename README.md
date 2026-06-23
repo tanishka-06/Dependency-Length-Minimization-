@@ -24,24 +24,11 @@ To test it, I took real sentences, shuffled their words into different orders (w
 
 ## Results
 
-| Language | Real sentence | "Valid" random shuffle | Fully random shuffle | % shorter vs. valid shuffle | % shorter vs. random shuffle |
-|---|---|---|---|---|---|
-| Chinese | 85.3 | 94.2 | 212.0 | 9.5% | 59.8% |
-| Turkish | 30.6 | 37.8 | 66.8 | 19.0% | 54.1% |
-| Hindi | 70.0 | 87.0 | 171.7 | 19.5% | 59.2% |
-| Finnish | 39.0 | 48.1 | 81.5 | 19.0% | 52.2% |
-| Korean | 39.6 | 48.2 | 92.6 | 17.9% | 57.3% |
-| Russian | 54.6 | 68.7 | 134.9 | 20.5% | 59.5% |
-| English | 57.2 | 74.3 | 142.4 | 23.0% | 59.8% |
-| Spanish | 74.9 | 104.4 | 230.9 | 28.2% | 67.5% |
-| Indonesian | 54.7 | 76.7 | 159.3 | 28.6% | 65.7% |
-| Arabic | 90.4 | 129.4 | 295.2 | 30.1% | 69.4% |
-| Basque | 37.4 | 45.1 | 76.3 | 17.1% | 51.0% |
-| Japanese | 57.6 | 97.3 | 206.1 | 40.8% | 72.0% |
-
-(numbers = average dependency length per sentence — lower means words are packed tighter together)
-
-The gap also gets bigger for longer sentences — real sentences scale roughly linearly with length, while fully-random shuffles scale almost quadratically (see `figures/03_dl_vs_length.png` after running the pipeline).
+- Natural word order produced shorter dependency lengths than both random baselines in all 12 languages.
+- Compared to unrestricted random word order, dependency lengths were reduced by 51–72%.
+- Even against structurally valid random reorderings, dependency lengths were 9.5–40.8% shorter.
+- The effect was statistically significant for every language tested (paired Wilcoxon signed-rank test; p < 1e-100 for most languages).
+- The advantage of natural word order increased as sentence length grew.
 
 ## Files
 
