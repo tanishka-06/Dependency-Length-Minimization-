@@ -1,0 +1,6 @@
+ud_data/
+sentence_results.csv
+figures/
+*.pyc
+__pycache__/
+.DS_Store
